@@ -13,7 +13,7 @@ def main():
     alunos = service.listar_todos_alunos()
 
     for aluno in alunos:
-        print(f"R.A.: {aluno.ra} - Nome: {aluno.nome} - Sobrenome: {aluno.sobrenome} - E=mail: {aluno.email}")
+        print(f"R.A: {aluno.ra} - Nome: {aluno.nome} - Sobrenome: {aluno.sobrenome} - E=mail: {aluno.email}")
 
 if __name__ == "__main__":
     main()
