@@ -8,7 +8,7 @@ class AlunoRepository:
     def salvar_aluno(self, aluno: Aluno):
         self.session.add(aluno)
         self.session.commit()
-        self.session.refresh()
+        self.session.refresh(aluno)
 
     def pesquisar_aluno_por_email(self, email: str):
         return self.session.query(Aluno).filter_by(email = email).first()
@@ -16,7 +16,7 @@ class AlunoRepository:
     def deletar_aluno(self, aluno: Aluno):
         self.session.add(aluno)
         self.session.commit()
-        self.session.refresh()   
+        self.session.refresh(aluno)   
 
     def listar_todos_alunos(self): 
         return self.session.query(Aluno).all()
